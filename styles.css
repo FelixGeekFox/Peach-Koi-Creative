@@ -157,16 +157,23 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 600; color: var(--rose); 
 .community-visual { position: relative; aspect-ratio: .88; overflow: hidden; display: grid; place-items: center; border-radius: 46% 46% 2rem 2rem; box-shadow: 0 25px 60px rgba(33,16,47,.16); }
 .community-visual::before { content: ""; position: absolute; inset: 1.1rem; border: 1px solid rgba(255,255,255,.25); border-radius: inherit; }
 .community-visual::after { content: "✦  ·  ✧  ·  ✦"; position: absolute; left: 50%; bottom: 1.6rem; transform: translateX(-50%); white-space: nowrap; color: rgba(255,255,255,.55); letter-spacing: .6rem; font-size: .7rem; }
+.community-rainbow { --community-accent: #6d5dcc; }
+.community-clover { --community-accent: #3d7f65; }
+.community-unbinary { --community-accent: #8957a5; }
+.community-wayward { --community-accent: #a95945; }
+.community-transmasc { --community-accent: #278ba8; }
 .visual-rainbow { background: linear-gradient(145deg, #443175, #1f1542); }
 .visual-clover { background: linear-gradient(145deg, #aee5ba, #376c59); }
 .visual-unbinary { background: linear-gradient(145deg, #f0bdde, #8256a0 62%, #3c2458); }
 .visual-wayward { background: linear-gradient(145deg, #d08a62, #563046 58%, #1f172c); }
+.visual-transmasc { background: linear-gradient(145deg, #b8edf4 0%, #6cc9dd 35%, #f7c6d8 68%, #486c9b 100%); }
 .visual-glow { position: absolute; width: 70%; height: 70%; border-radius: 50%; filter: blur(35px); opacity: .45; background: var(--pink); }
 .visual-clover .visual-glow { background: var(--mint); }
 .visual-unbinary .visual-glow { background: var(--wisteria); }
 .visual-wayward .visual-glow { background: var(--gold); }
+.visual-transmasc .visual-glow { background: white; }
 .visual-word { position: absolute; z-index: 1; bottom: 12%; right: 8%; color: rgba(255,255,255,.07); font: 800 clamp(5rem, 10vw, 9rem)/1 var(--display); letter-spacing: -.08em; }
-.visual-symbol, .clover-mark, .unbinary-mark, .wayward-mark { position: relative; z-index: 2; width: 55%; aspect-ratio: 1; }
+.visual-symbol, .clover-mark, .unbinary-mark, .wayward-mark, .transmasc-mark { position: relative; z-index: 2; width: 55%; aspect-ratio: 1; }
 .visual-symbol { border: 2px solid rgba(255,255,255,.55); border-radius: 50%; box-shadow: 0 0 40px rgba(195,148,234,.4), inset 0 0 40px rgba(195,148,234,.2); }
 .visual-symbol span { position: absolute; top: 24%; font-size: 7rem; color: var(--mint); line-height: 1; }
 .visual-symbol span:first-child { left: 10%; transform: rotate(-35deg); }.visual-symbol span:nth-child(2) { right: 10%; transform: rotate(145deg); color: var(--pink); }
@@ -182,13 +189,21 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 600; color: var(--rose); 
 .wayward-mark span { position: absolute; inset: 0; display: grid; place-items: center; color: var(--gold); font-size: 10rem; filter: drop-shadow(0 0 25px rgba(255,203,121,.25)); }
 .wayward-mark i { position: absolute; left: 50%; top: 50%; width: 75%; height: 2px; background: rgba(255,255,255,.5); transform: translate(-50%,-50%) rotate(-40deg); }
 .wayward-mark b { top: 20%; left: 75%; }
+.transmasc-mark { border: 3px solid rgba(255,255,255,.82); border-radius: 50%; box-shadow: 0 0 42px rgba(255,255,255,.35), inset 0 0 30px rgba(255,255,255,.18); }
+.transmasc-mark span { position: absolute; inset: 22%; border: 2px solid white; border-radius: 50%; background: rgba(72,108,155,.2); }
+.transmasc-mark i { position: absolute; width: 46%; height: 3px; right: -20%; top: 16%; background: white; transform: rotate(-45deg); transform-origin: left center; box-shadow: 0 0 14px rgba(255,255,255,.5); }
+.transmasc-mark i::before, .transmasc-mark i::after { content: ""; position: absolute; width: 18px; height: 3px; right: -2px; background: white; transform-origin: right center; }
+.transmasc-mark i::before { transform: rotate(45deg); }
+.transmasc-mark i::after { transform: rotate(-45deg); }
+.transmasc-mark b { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: white; font-size: 2rem; }
 .community-content { max-width: 560px; }
-.community-type { margin-bottom: 1rem; color: var(--rose); text-transform: uppercase; letter-spacing: .17em; font: 800 .7rem var(--display); }
+.community-type { margin-bottom: 1rem; color: var(--community-accent, var(--rose)); text-transform: uppercase; letter-spacing: .17em; font: 800 .7rem var(--display); }
 .community-content h2 { margin-bottom: 1.5rem; font-size: clamp(3.5rem, 6vw, 6.5rem); }
+.community-transmasc h2 { font-size: clamp(3.2rem, 5.5vw, 6rem); }
 .community-content > p:not(.community-type) { color: #6a586e; font-size: 1.08rem; }
 .community-tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 1.7rem 0 2.2rem; }
-.community-tags li { padding: .34rem .7rem; border: 1px solid rgba(76,40,95,.15); border-radius: 999px; color: var(--aubergine); font-size: .72rem; font-weight: 600; }
-.community-link { display: inline-flex; gap: .8rem; align-items: center; font-family: var(--display); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 5px; text-decoration-color: var(--pink); }
+.community-tags li { padding: .34rem .7rem; border: 1px solid color-mix(in srgb, var(--community-accent, var(--aubergine)) 28%, transparent); border-radius: 999px; color: var(--community-accent, var(--aubergine)); background: color-mix(in srgb, var(--community-accent, var(--cream)) 7%, white); font-size: .72rem; font-weight: 600; }
+.community-link { display: inline-flex; gap: .8rem; align-items: center; color: var(--community-accent, var(--plum)); font-family: var(--display); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 5px; text-decoration-color: color-mix(in srgb, var(--community-accent, var(--pink)) 55%, transparent); }
 .community-link-muted { color: var(--ink-soft); text-decoration: none; font-family: var(--serif); }
 .collective-note { padding-top: clamp(6rem, 10vw, 10rem); padding-bottom: clamp(6rem, 10vw, 10rem); display: grid; grid-template-columns: minmax(220px, .55fr) 1.45fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; background: var(--pink); }
 .collective-note img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: 0 25px 60px rgba(76,40,95,.2); }

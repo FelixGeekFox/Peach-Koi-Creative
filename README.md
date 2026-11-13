@@ -6,6 +6,8 @@ The public website for Peach Koi Creative, an independent creative collective wh
 
 - **Home** — the collective's identity, values, and creative direction
 - **Communities** — Rainbow Circuits, Cloverlight, Unbinary, Wayward & Wyrd, and TransmascAI
+- **AI Resources** — learning, creative tools and responsible practice
+- **Partners** — partner profiles, beginning with Felix Greyson
 
 ## Brand system
 

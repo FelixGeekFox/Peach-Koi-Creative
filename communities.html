@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Meet the connected communities in the Peach Koi Creative collective.">
   <meta name="theme-color" content="#21102f">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('pk-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}</script>
   <title>Our Communities | Peach Koi Creative</title>
   <link rel="icon" href="assets/images/twin-koi-emblem.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,7 @@
       </a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button><span class="sr-only">Open navigation</span><span></span><span></span></button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation" data-nav>
-        <a href="index.html">Home</a><a class="is-active" href="communities.html">Communities</a><a href="index.html#about">About</a><a class="nav-cta" href="index.html">Our world <span aria-hidden="true">↗</span></a>
+        <a href="index.html">Home</a><a class="is-active" href="communities.html">Communities</a><a href="index.html#about">About</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>Dark</span></button><a class="nav-cta" href="index.html">Our world <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 

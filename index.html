@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Peach Koi Creative is a dreamy creative collective where art, identity and community bloom together.">
   <meta name="theme-color" content="#21102f">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('pk-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme='light'}</script>
   <title>Peach Koi Creative | Where imagination blooms</title>
   <link rel="icon" href="assets/images/twin-koi-emblem.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +28,7 @@
         <a class="is-active" href="index.html">Home</a>
         <a href="communities.html">Communities</a>
         <a href="#about">About</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><span data-theme-icon aria-hidden="true">☾</span><span data-theme-label>Dark</span></button>
         <a class="nav-cta" href="communities.html">Explore <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
@@ -102,7 +104,7 @@
           <h2>Different worlds.<br><em>One creative current.</em></h2>
           <p>From queer-first connection and playful AI art to identity beyond the binary and story-rich spaces for the wonderfully strange, our communities are distinct by design.</p>
           <div class="community-mini-list">
-            <span>Rainbow Circuits</span><span>Cloverlight</span><span>Unbinary</span><span>Wayward &amp; Wyrd</span>
+            <span>Rainbow Circuits</span><span>Cloverlight</span><span>Unbinary</span><span>Wayward &amp; Wyrd</span><span>TransmascAI</span>
           </div>
           <a class="button button-light" href="communities.html">See every community <span aria-hidden="true">→</span></a>
         </div>

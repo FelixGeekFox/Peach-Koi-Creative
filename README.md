@@ -5,7 +5,7 @@ The public website for Peach Koi Creative, an independent creative collective wh
 ## Pages
 
 - **Home** — the collective's identity, values, and creative direction
-- **Creative Studio** (`studio.html`) — creative partners, beginning with Felix Greyson, and tools
+- **Creative Studio** (`studio.html`) — creative partners, beginning with Felix Greyson, plus the PKC Image Prompt Generator and other tools
 - **AI Resources** (`ai-resources.html`) — the Studio’s learning and creative-tool library
 - **Creative Collective** (`communities.html`) — independent member communities
 - **Creative Connection** (`connection.html`) — membership, shared standards, applications and moderator enquiries

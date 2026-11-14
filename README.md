@@ -5,9 +5,25 @@ The public website for Peach Koi Creative, an independent creative collective wh
 ## Pages
 
 - **Home** — the collective's identity, values, and creative direction
-- **Communities** — Rainbow Circuits, Cloverlight, Unbinary, Wayward & Wyrd, and TransmascAI
-- **AI Resources** — learning, creative tools and responsible practice
-- **Partners** — partner profiles, beginning with Felix Greyson
+- **Creative Studio** (`studio.html`) — creative partners, beginning with Felix Greyson, and tools
+- **AI Resources** (`ai-resources.html`) — the Studio’s learning and creative-tool library
+- **Creative Collective** (`communities.html`) — independent member communities
+- **Creative Connection** (`connection.html`) — membership, shared standards, applications and moderator enquiries
+- Old links to `partners.html` redirect to `studio.html#partners`; the communities URL is unchanged.
+
+## Application and contact forms
+
+`connection-config.js` holds published Google Forms responder URLs for membership
+applications and moderator enquiries. Never put credentials or editor URLs here.
+`connection.js` offers a direct link and loads an embedded form only when requested.
+Google handles validation, collection and confirmation; the site does not proxy
+submissions, store form answers or claim success on an iframe load.
+
+Manage questions, notifications and responses in Google Forms. Keep response
+summaries private, avoid requiring Google sign-in, and verify public access before
+announcing a form. Required reply email and consent are collected inside Google
+Forms. The Connection page discloses Google’s role and links its privacy policy.
+Unconfigured form URLs leave the corresponding load control disabled.
 
 ## Brand system
 

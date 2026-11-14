@@ -344,6 +344,42 @@ html[data-theme="dark"] .collective-note > div > p:last-child { color: rgba(255,
 }
 
 /* Resource library and partner profiles */
+[hidden] { display: none !important; }
+.google-form-panel h3 { font-size: 1.8rem; line-height: 1.15; }
+.google-form-frame { width: 100%; height: 1500px; border: 0; margin-top: 1.5rem; background: white; border-radius: .75rem; }
+.google-form-panel .button-row { align-items: center; margin-top: 1rem; }
+.google-form-panel .text-link { font-size: .82rem; }
+.connection-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 5vw, 5rem); align-items: start; padding-block: clamp(4rem, 7vw, 7rem); background: #fffaf7; }
+.connection-contact { background: #f8eaf2; }
+.connection-intro h2 { font-size: clamp(2.8rem, 4.5vw, 5rem); line-height: 1.08; margin-bottom: 1.5rem; }
+.connection-intro > p:not(.eyebrow) { color: var(--ink-soft); max-width: 50ch; }
+.connection-form { padding: clamp(1.3rem, 3vw, 2.5rem); background: var(--cream); border: 1px solid #4c285f25; border-radius: 1.5rem; }
+.connection-form fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
+.connection-form legend { font: 700 1.5rem var(--display); padding: 0; margin-bottom: 1rem; }
+.connection-form label { display: block; margin-top: 1.2rem; margin-bottom: .4rem; font-weight: 600; font-size: .9rem; }
+.connection-form label > span { font-weight: 400; }
+.connection-form input:not([type="checkbox"]), .connection-form select, .connection-form textarea { display: block; width: 100%; min-height: 46px; padding: .7rem .85rem; color: var(--plum); background: #fffaf7; border: 1px solid #4c285f55; border-radius: .6rem; font: inherit; font-size: 1rem; }
+.connection-form textarea { resize: vertical; }
+.connection-form :is(input, select, textarea, button):focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
+.connection-form .form-check { display: flex; align-items: start; gap: .7rem; font-size: .85rem; line-height: 1.5; }
+.form-check input { flex-shrink: 0; width: 18px; height: 18px; margin-top: .15rem; accent-color: var(--aubergine); }
+.connection-form .button { margin-top: 1.4rem; cursor: pointer; }
+.connection-form .button:disabled { cursor: not-allowed; opacity: .55; }
+.form-note, .form-status { font-size: .82rem; color: var(--ink-soft); line-height: 1.6; }
+.form-note { margin: .45rem 0 0; }
+.form-status { margin: 1.3rem 0 0; }
+.form-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.collective-rules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3.5rem; list-style: none; padding: 0; margin: 3rem 0 0; }
+.collective-rules li { border-top: 1px solid #4c285f30; padding-top: 1.4rem; }
+.collective-rules h3 { font-size: 1.55rem; line-height: 1.2; }
+.collective-rules p { color: #5d4963; }
+html[data-theme="dark"] .connection-section { background: #1b0e27; }
+html[data-theme="dark"] .connection-contact { background: #25132c; }
+html[data-theme="dark"] .connection-form { background: #24132f; border-color: #c394ea55; }
+html[data-theme="dark"] .connection-form :is(input:not([type="checkbox"]), select, textarea) { color: var(--cream); background: #14091f; border-color: #c394ea77; }
+html[data-theme="dark"] .connection-intro > p:not(.eyebrow), html[data-theme="dark"] .collective-rules p, html[data-theme="dark"] .form-note, html[data-theme="dark"] .form-status { color: #d3c4d9; }
+html[data-theme="dark"] .collective-rules li { border-color: #c394ea55; }
+@media (max-width: 800px) { .connection-section, .collective-rules { grid-template-columns: 1fr; } }
 .directory-hero { display: grid; grid-template-columns: 1.5fr .65fr; gap: 3rem; align-items: center; padding-top: clamp(4rem, 8vw, 8rem); padding-bottom: clamp(4rem, 8vw, 8rem); background: radial-gradient(ellipse at 90% 20%, #f6b2d460, transparent 55%), var(--cream); }
 .directory-intro { max-width: 900px; }
 .directory-intro h1 { font-size: clamp(3.5rem, 6.6vw, 7rem); line-height: 1.07; margin-bottom: 1.5rem; }
